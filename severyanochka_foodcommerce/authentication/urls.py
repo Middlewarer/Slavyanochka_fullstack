@@ -4,5 +4,4 @@ from . import views
 
 urlpatterns = [
     path('register/', views.RegistrationPageView.as_view(), name='register_page'),
-    path('index/', views.index, name='index')
 ]

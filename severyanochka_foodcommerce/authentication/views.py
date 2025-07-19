@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import FormView
+from django.views.generic import FormView, TemplateView
 from . import forms
 
 class RegistrationPageView(FormView):
@@ -14,5 +14,6 @@ class RegistrationPageView(FormView):
         user.save()
         return super().form_valid(form)
 
-def index(request):
-    return HttpResponse("<h1>Renderview</h1>")
+
+class MainPageView(TemplateView):
+    template_name = 'authentication/main.html'
