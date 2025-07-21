@@ -16,7 +16,12 @@
     <div class="firstheadersect">
         <img class='main_logo' src="{% static 'authentication/assets/main_logo.svg' %}" alt="">
     <button class="catalog_button">Каталог</button>
-    <div class="searchinput"><input type="text"></div>
+    <form method="get" action="/search/">
+  <div class="searchinput">
+    <input type="text" name="q" placeholder="Поиск...">
+    <button type="submit" class="search-button">🔍</button>
+  </div>
+</form>
     </div>
     <div class="secondheadersect">
     <div class="firstcomp">
@@ -51,10 +56,10 @@
         </div>
             <div class="specials_row">
 
-
+            {% for special in specials %}
                 <div class="special">
                     <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
+                    <img src="{{special.main_image.url}}" alt="">
                     </div>
                     <div class="special_content">
 
@@ -79,92 +84,7 @@
 
                     </div>
                 </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-
+            {% endfor %}
             </div>
         </div>
 
@@ -175,10 +95,10 @@
         </div>
             <div class="specials_row">
 
-
+                {% for new in new_ones %}
                 <div class="special">
                     <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
+                    <img src="{{ new.main_image.url }}" alt="">
                     </div>
                     <div class="special_content">
 
@@ -203,92 +123,7 @@
 
                     </div>
                 </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-
+                {% endfor %}
             </div>
         </div>
 
@@ -299,10 +134,10 @@
         </div>
             <div class="specials_row">
 
-
+            {% for special in specials %}
                 <div class="special">
                     <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
+                    <img src="{{special.main_image.url}}" alt="">
                     </div>
                     <div class="special_content">
 
@@ -328,89 +163,7 @@
                     </div>
                 </div>
 
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="special">
-                    <div class="special_image">
-                    <img src="{% static 'authentication/assets/image.png' %}" alt="">
-                    </div>
-                    <div class="special_content">
-
-                        <div class="prices">
-                            <p>44,50 ₽</p>
-                            <p>50,50 ₽</p>
-                        </div>
-                        <div class="underprices">
-                            <p>С картой</p>
-                            <p>Обычная</p>
-                        </div>
-
-                    <div class="special_title">
-                        <h3>Г\Ц Блинчики с мясом вес, Россия</h3>
-                    </div>
-                    <div class="stars">
-
-                    </div>
-                    <div class="special_button">
-                        <button>В корзину</button>
-                    </div>
-
-                    </div>
-                </div>
+                {% endfor %}
 
 
             </div>
@@ -423,11 +176,23 @@
 
             <div class="special_offers_offers">
                 <div class="offer_one">
-
+                    <div class="offer_one_leftpart">
+                        <h3>Оформите карту ""Северяночка""</h3>
+                        <p>И получайте бонусы при покупке <br> в магазинах и на сайте</p>
+                    </div>
+                    <div class="offer_one_rightpart">
+                        <img src="{% static 'authentication/assets/loyaltycard.png' %}" alt="">
+                    </div>
                 </div>
 
                 <div class="offer_two">
-
+                    <div class="offer_one_leftpart">
+                        <h3>Покупайте акционные товары</h3>
+                        <p>И получайте вдвое больше бонусов</p>
+                    </div>
+                    <div class="offer_one_rightpart">
+                        <img src="{% static 'authentication/assets/loyaltycard.png' %}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -435,7 +200,7 @@
 </main>
 
 <footer>
-    
+
 </footer>
     </div>
 </body>
