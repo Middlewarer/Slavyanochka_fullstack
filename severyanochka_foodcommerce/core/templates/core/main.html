@@ -1,51 +1,14 @@
+{% extends 'base/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'authentication/mainstyle.css' %}">
-</head>
-<body>
-<div class="main_container">
-<header>
-    <div class="firstheadersect">
-        <img class='main_logo' src="{% static 'authentication/assets/main_logo.svg' %}" alt="">
-        <a href="{% url 'catalog' %}"><button class="catalog_button">Каталог</button></a>
-    <form method="get" action="/search/">
-  <div class="searchinput">
-    <input type="text" name="q" placeholder="Поиск...">
-    <button type="submit" class="search-button">🔍</button>
-  </div>
-</form>
-    </div>
-    <div class="secondheadersect">
-    <div class="firstcomp">
-        <img src="{% static 'authentication/assets/main_heart.svg' %}" alt="">
-        <p>Избранное</p>
-    </div>
-    <div class="secondcomp">
-        <img src="{% static 'authentication/assets/main_box.svg' %}" alt="">
-        <p>Заказы</p>
-    </div>
-    <div class="thirdcomp">
-        <img src="{% static 'authentication/assets/main_cart.svg' %}" alt="">
-        <p>Корзина</p>
-    </div>
-    </div>
-    <div class="authbar">
-        <img src="{% static 'authentication/assets/main_avatar.svg' %}" alt="">
-        <p>Алексей</p>
-    </div>
+{% include 'base/includes/header.html' %}
+{% block content %}
 
-
-</header>
-
+ {% block styles %}
+<link rel="stylesheet" href="{% static 'core/mainpage_styles.css' %}">
+{% endblock %}
 <main>
+
     <div class="hslider"><img src="{% static 'authentication/assets/Sliders.svg' %}" alt=""></div>
 
     <section class="init">
@@ -211,9 +174,4 @@
     </section>
 </main>
 
-<footer>
-
-</footer>
-    </div>
-</body>
-</html>
+{% endblock %}

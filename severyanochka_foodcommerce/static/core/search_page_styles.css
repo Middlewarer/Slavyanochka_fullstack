@@ -1,0 +1,116 @@
+.specials {
+margin-bottom: 55px;
+}
+
+.special {
+height: 349px;
+width: 272px;
+background-color: white;
+padding: 0;
+margin: 0;
+}
+
+.special_title h1 {
+font-weight: 300;
+}
+
+.specials_row {
+display: flex;
+gap: 2rem;
+}
+
+.specials_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.special_content {
+padding: 10px;
+}
+
+.special_image img{
+    width: 272px;
+    height: 160px;
+}
+
+.special_button button {
+width: 100%;
+border-color: green;
+background-color: white;
+height: 40px;
+border-width: 3px;
+border-radius: 6px;
+}
+
+.special_offers {
+width: 100%;
+}
+
+.special_offers_offers {
+display: flex;
+justify-content: space-between;
+}
+
+.specials_row {
+display: flex;
+gap: 2rem;
+}
+
+.special_offers {
+    padding-bottom: 80px;
+}
+
+.special_offers_title h2 {
+font-size: 36px;
+opacity: 0.7;
+}
+
+.specials_firstline {
+font-size: 24px;
+display: flex;
+justify-content: space-between;
+width: 100%;
+opacity: 0.9;
+}
+
+.specials_firstline h2{
+opacity: 0.9;
+}
+
+.specials_firstline p {
+    position: relative;
+    top: 24px;
+}
+
+.specials {
+margin-bottom: 55px;
+}
+
+.prices, .underprices{
+display: flex;
+justify-content: space-between;
+padding: 0;
+margin: 0;
+}
+
+.prices p:nth-child(1) {
+font-weight: 900;
+font-size: 20px;
+}
+
+.prices p:nth-child(2) {
+font-size: 16px;
+position: relative;
+top: 7.5px;
+}
+
+.init {
+width: 100%;
+height: 100%;
+padding-left: 150px;
+padding-right: 100px;
+background-color: #FBF8EC;
+padding-top: 30px;
+min-height: 500px;
+}

@@ -1,0 +1,152 @@
+.init {
+width: 100%;
+height: 100%;
+padding-left: 150px;
+padding-right: 100px;
+background-color: #FBF8EC;
+padding-top: 30px;
+min-height: 500px;
+}
+
+a.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.catalog h2 {
+    font-size: 45px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);   /* 4 колонки */
+  grid-template-rows: repeat(4, 230px);    /* 4 строки по 200px */
+  gap: 45px;                               /* расстояние между элементами */
+  max-width: 1208px;                        /* ограничение ширины сетки (по желанию) */
+  margin: 0 auto;                          /* центрирование */
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;     /* выравнивание по вертикали */
+  justify-content: center; /* по горизонтали */
+  font-size: 24px;
+}
+
+.grid-item:nth-child(1) {
+    grid-column: span 2;
+    background-image: url('./assets/catalog_images/milk_cheese_egg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(2) {
+    background-image: url('./assets/catalog_images/bread.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(3) {
+    background-image: url('./assets/catalog_images/fruits_vegetables.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(4) {
+    background-image: url('./assets/catalog_images/freezed.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(5) {
+    background-image: url('./assets/catalog_images/drinks.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(6) {
+    background-image: url('./assets/catalog_images/pastries.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(7) {
+    background-image: url('./assets/catalog_images/tea_coffee.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(8) {
+    background-image: url('./assets/catalog_images/bacally.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(9) {
+    background-image: url('./assets/catalog_images/healthy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(10) {
+    background-image: url('./assets/catalog_images/zooprods.png');
+    grid-column: span 2;
+}
+
+.grid-item:nth-child(11) {
+    background-image: url('./assets/catalog_images/childfood.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-item:nth-child(12) {
+    background-image: url('./assets/catalog_images/meat_bird.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column: span 2;
+}
+
+.grid-item:nth-child(13) {
+    background-image: url('./assets/catalog_images/not_cons.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a.grid-item:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.grid-item:nth-child(14) {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.category_suggestions {
+    display: flex;
+    gap: 10px;
+}

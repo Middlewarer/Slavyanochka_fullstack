@@ -1,0 +1,108 @@
+.init {
+width: 100%;
+height: 100%;
+padding-left: 150px;
+padding-right: 100px;
+background-color: #FBF8EC;
+padding-top: 30px;
+min-height: 500px;
+}
+
+.product_secondline {
+    display: flex;
+    gap: 30px;
+}
+
+.product_secondline h2 {
+    font-size: 24px;
+}
+
+.product_special {
+    display: flex;
+    gap: 8px;
+}
+
+.product_info {
+    width: 456px;
+    height: 496px;
+}
+
+.review {
+    display: flex;
+    gap: 4px;
+}
+
+.review .review_text {
+    position: relative;
+    bottom: 1px;
+}
+
+
+
+.prinfo_essential {
+    display: flex;
+    gap: 40px;
+}
+
+.info_firstline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info_firstline p:nth-child(1) {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+}
+
+.info_firstline p:nth-child(2) {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.info_secondline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.underbutton p {
+    margin: 10px;
+}
+
+.underbutton p:nth-child(1) {
+    margin: 10px;
+    color: green;
+}
+
+.cart_button button {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #FF6633;
+    color: white;
+    font-size: 24px;
+}
+
+.underbutton p:nth-child(1) {
+    text-align: center;
+}
+
+.underbutton p:nth-child(2) {
+    text-align: center;
+}
+
+.brand_info, .coo_info, .external_info {
+    display: flex;
+    justify-content: space-between;
+    height: 26px;
+}
+
+.brand_info, .external_info {
+    background-color: #F3F2F1;
+}
