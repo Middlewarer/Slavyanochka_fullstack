@@ -51,11 +51,55 @@
     <section class="init">
         <div class="specials">
         <div class="specials_firstline">
-        <h2>Товары по запросу  {{ query }}</h2>
+        <h2>{{ category }}</h2>
         </div>
+
+            <div class="category_suggestions">
+                <div>Товары нашего производства</div>
+                <div>Полезное питание</div>
+                <div>Без ГМО</div>
+            </div>
+
+            <div class="essentials">
+                <!-- Filter fields -->
+
+            <div class="filter_essence">
+                <form action="{% url 'catalog_search' category.slug %}" method='get'>
+                    {% csrf_token %}
+                    <div class="filter_filterbutton">
+                        <p>Фильтр</p>
+                    </div>
+
+                    <div class="filter_firstline">
+                        <h2>Цена</h2>
+                        <div class="clear_button"><p>Очистить</p></div>
+                    </div>
+
+                    <div class="filter_secondline">
+                        <input type="text" name="from">
+                        <p>-</p>
+                        <input type="text" name="to">
+                    </div>
+
+                    <div class="isbutton">
+                    <label class="switch">
+                      <input type="checkbox" name="in_stock">
+                      <span class="slider"></span>
+                    </label>
+                    <span style="margin-left: 10px; position: relative; top: 5px;">В наличии</span>
+                    </div>
+                    <div class="button_submit">
+                    <button type="submit">Применить</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+                <!-- Right columns with species -->
             <div class="specials_row">
 
-            {% for special in object_list %}
+            {% for special in products %}
                 <div class="special">
                     <div class="special_image">
                         {% if special.main_image %}
@@ -88,6 +132,7 @@
                     </div>
                 </div>
             {% endfor %}
+            </div>
             </div>
         </div>
     </section>

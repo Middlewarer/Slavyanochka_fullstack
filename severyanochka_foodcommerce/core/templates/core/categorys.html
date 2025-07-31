@@ -15,7 +15,7 @@
 <header>
     <div class="firstheadersect">
         <img class='main_logo' src="{% static 'authentication/assets/main_logo.svg' %}" alt="">
-    <button class="catalog_button">Каталог</button>
+    <a href="{% url 'catalog' %}"><button class="catalog_button">Каталог</button></a>
     <form method="get" action="/search/">
   <div class="searchinput">
     <input type="text" name="q" placeholder="Поиск...">

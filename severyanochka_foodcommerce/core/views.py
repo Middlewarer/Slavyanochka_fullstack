@@ -4,8 +4,9 @@ from django.utils import timezone
 from datetime import timedelta
 
 from django.shortcuts import render, redirect, get_object_or_404
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from .models import Product, Category
+from django.db.models import Q
 
 
 class MainPageView(TemplateView):
@@ -41,17 +42,40 @@ class SearchPageView(ListView):
 
 class SearchByCatalogPageView(ListView):
     model = Product
-    template_name = 'core/search_catalog.html'
+    template_name = 'core/search_by_catalog.html'
     context_object_name = 'products'
 
     def get_queryset(self):
         self.category = get_object_or_404(Category, slug=self.kwargs['slug'])
-        return Product.objects.filter(category=self.category)
+        queryset = Product.objects.filter(category=self.category)
+        in_stock = self.request.GET.get('in_stock')
+        f_from = self.request.GET.get('from')
+        f_to = self.request.GET.get('to')
+
+        if in_stock:
+            queryset = queryset.filter(count__gte=1)
+
+        if f_from:
+            queryset = queryset.filter(price__gte=f_from)
+
+        if f_to:
+            queryset = queryset.filter(price__lte=f_to)
+
+        return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['category'] = self.category
+        context['in_stock'] = self.request.GET.get('in_stock')
+        context['f_from'] = self.request.GET.get('from')
+        context['f_to'] = self.request.GET.get('to')
         return context
+
+
+class ProductDetailView(DetailView):
+    model = Product
+    template_name = 'core/product_detail.html'
+
 
 
 class CatalogPageView(TemplateView):

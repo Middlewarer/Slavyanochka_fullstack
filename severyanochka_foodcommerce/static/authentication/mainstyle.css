@@ -68,12 +68,299 @@ position: relative;
 top: 5px;
 }
 
+.category_suggestions {
+    display: flex;
+    gap: 10px;
+}
+
+.filter_essence {
+    width: 272px;
+    height: 542px;
+    margin-right: 100px;
+}
+
+.filter_firstline h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.filter_firstline {
+    margin-top: 40px;
+}
+
+.filter_filterbutton {
+    background-color: #F3F2F1;
+    width: 272px;
+    height: 44px;
+    text-align: left;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.product_secondline {
+    display: flex;
+    gap: 30px;
+}
+
+.product_secondline h2 {
+    font-size: 24px;
+}
+
+.review {
+    display: flex;
+    gap: 4px;
+}
+
+.review .review_text {
+    position: relative;
+    bottom: 1px;
+}
+
+.product_special {
+    display: flex;
+    gap: 8px;
+}
+
+.prinfo_essential {
+    display: flex;
+    gap: 40px;
+}
+
+.info_firstline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info_firstline p:nth-child(1) {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 10px;
+}
+
+.info_firstline p:nth-child(2) {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.info_secondline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.underbutton p {
+    margin: 10px;
+}
+
+.underbutton p:nth-child(1) {
+    margin: 10px;
+    color: green;
+}
+
+.cart_button button {
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    background-color: #FF6633;
+    color: white;
+    font-size: 24px;
+}
+
+.underbutton p:nth-child(1) {
+    text-align: center;
+}
+
+.underbutton p:nth-child(2) {
+    text-align: center;
+}
+
+.brand_info, .coo_info, .external_info {
+    display: flex;
+    justify-content: space-between;
+    height: 26px;
+}
+
+.brand_info, .external_info {
+    background-color: #F3F2F1;
+}
+
+
+
+.product_info {
+    width: 456px;
+    height: 496px;
+}
+
+
+.clear_button {
+    background-color: #F3F2F1;
+    width: 85px;
+    height: 32px;
+    text-align: center;
+    font-weight: 400;
+    position: relative;
+    top: 3px;
+}
+
+.clear_button p {
+    position: relative;
+    top: 4px;
+}
+
+.filter_filterbutton p {
+    font-weight: 700;
+    position:relative;
+    top: 3px;
+    font-size: 16px;
+}
+
+.filter_secondline {
+    display: flex;
+    gap: 7px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.isbutton {
+    margin: 20px 0px;
+}
+
+.essentials {
+    display: flex;
+}
+
+.button_submit button {
+    background-color: #FF6633;
+    width: 272px;
+    height: 40px;
+    color: white;
+    font-size: 18px;
+}
+
+.filter_secondline p {
+    position: relative;
+    top: -8px;
+    font-size: 40px;
+}
+
+.filter_secondline input {
+    width: 124px;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.filter_firstline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+.category_suggestions div {
+    background-color: grey;
+    border: 1px solid grey;
+    background-color: #F3F2F1;
+    text-align: center;
+    opacity: 0.7;
+    padding: 5px;
+    height: 32px;
+    width: 220px;
+    border-radius: 5px;
+}
+
+.category_suggestions {
+    padding-bottom: 70px;
+    display: flex;
+    gap: 20px;
+}
+
+.category_suggestions div:nth-child(2) {
+    height: 32px;
+    width: 147px;
+}
+
+.category_suggestions div:nth-child(3) {
+    height: 32px;
+    width: 87px;
+}
+
 .catalog_button {
 background-color: #FF6633;
 width: 140px;
 height: 40px;
 position: relative;
 top: 2px;
+}
+
+.catalog_button:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px;
+}
+
+
+
+a.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+a.grid-item:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 .firstcomp img{

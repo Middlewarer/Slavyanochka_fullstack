@@ -23,6 +23,7 @@ class Product(models.Model):
     main_image = models.ImageField(upload_to='product_images/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
+    count = models.IntegerField(default=1)
 
 
 class ProductImages(models.Model):
