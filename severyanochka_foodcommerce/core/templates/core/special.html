@@ -1,0 +1,103 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'core/specials_styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="hslider"><img src="{% static 'authentication/assets/Sliders.svg' %}" alt=""></div>
+
+    <section class="init">
+        <div class="specials">
+        <div class="specials_firstline">
+        <h2>Избранное</h2>
+        </div>
+
+            <div class="category_suggestions">
+                <div>Товары нашего производства</div>
+                <div>Полезное питание</div>
+                <div>Без ГМО</div>
+            </div>
+
+            <div class="essentials">
+                <!-- Filter fields -->
+
+            <div class="filter_essence">
+                <form action="{% url 'specials' %}" method='get'>
+                    {% csrf_token %}
+                    <div class="filter_filterbutton">
+                        <p>Фильтр</p>
+                    </div>
+
+                    <div class="filter_firstline">
+                        <h2>Цена</h2>
+                        <div class="clear_button"><p>Очистить</p></div>
+                    </div>
+
+                    <div class="filter_secondline">
+                        <input type="text" name="from">
+                        <p>-</p>
+                        <input type="text" name="to">
+                    </div>
+
+                    <div class="isbutton">
+                    <label class="switch">
+                      <input type="checkbox" name="in_stock">
+                      <span class="slider"></span>
+                    </label>
+                    <span style="margin-left: 10px; position: relative; top: 5px;">В наличии</span>
+                    </div>
+                    <div class="button_submit">
+                    <button type="submit">Применить</button>
+                    </div>
+                </form>
+
+            </div>
+
+
+                <!-- Right columns with species -->
+            <div class="specials_row">
+
+            {% for special in object_list %}
+                <div class="special">
+                    <div class="special_image">
+                        {% if special.main_image %}
+                    <img src="{{special.main_image.url}}" alt="">
+                        {% else %}
+                        <img src="https://dummyimage.com/272x160" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="special_content">
+
+                        <div class="prices">
+                            <p>{{ special.price }} P</p>
+                            <p>{{ special.price }}</p>
+                        </div>
+                        <div class="underprices">
+                            <p>С картой</p>
+                            <p>Обычная</p>
+                        </div>
+
+                    <div class="special_title">
+                        <h3>{{ special.title }}</h3>
+                    </div>
+                    <div class="stars">
+
+                    </div>
+                    <div class="special_button">
+                        <button>В корзину</button>
+                    </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

@@ -85,3 +85,33 @@ class CatalogPageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['categorys'] = Category.objects.all()
         return context
+
+
+class SpecialPageView(ListView):
+    template_name = 'core/special.html'
+    model = Product
+
+
+    def get_queryset(self):
+        queryset = Product.objects.all()
+        in_stock = self.request.GET.get('in_stock')
+        f_from = self.request.GET.get('from')
+        f_to = self.request.GET.get('to')
+
+        if in_stock:
+            queryset = queryset.filter(count__gte=1)
+
+        if f_from:
+            queryset = queryset.filter(price__gte=f_from)
+
+        if f_to:
+            queryset = queryset.filter(price__lte=f_to)
+
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['in_stock'] = self.request.GET.get('in_stock')
+        context['f_from'] = self.request.GET.get('from')
+        context['f_to'] = self.request.GET.get('to')
+        return context

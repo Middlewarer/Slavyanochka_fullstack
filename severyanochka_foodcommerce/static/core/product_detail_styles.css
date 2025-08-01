@@ -1,12 +1,4 @@
-.init {
-width: 100%;
-height: 100%;
-padding-left: 150px;
-padding-right: 100px;
-background-color: #FBF8EC;
-padding-top: 30px;
-min-height: 500px;
-}
+
 
 .product_secondline {
     display: flex;

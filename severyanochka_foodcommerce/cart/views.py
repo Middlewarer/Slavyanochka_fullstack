@@ -1,5 +1,17 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
+from .models import OrderItem, Order
 
-class CartView(ListView):
+
+class OrderView(ListView):
+    template_name = 'cart/orders.html'
+    model = OrderItem
+    context_object_name = 'specials'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data()
+        context['orders'] = Order.objects.all()
+        return context
+
+
 
