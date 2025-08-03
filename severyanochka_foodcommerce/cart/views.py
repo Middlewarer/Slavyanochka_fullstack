@@ -14,4 +14,11 @@ class OrderView(ListView):
         return context
 
 
+class CartView(TemplateView):
+    template_name = 'cart/cart_page.html'
+
+
+class OfferOrderView(TemplateView):
+    template_name = 'cart/order_offer.html'
+
 

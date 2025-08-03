@@ -1,0 +1,152 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'cart/cart_page_styles.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="init">
+    <h2>Корзина</h2>
+    <div class="mainpart">
+    <div class="product_cart_list">
+        <div class="product_cart_entry">
+            <div class="product_cart_leftpart">
+            <div class="leftimage">
+                <img src="{% static 'cart/assets/cart_product_img.png' %}" alt="">
+            </div>
+                <h2>Название товара</h2>
+            </div>
+            <div class="product_cart_secondcolumn">
+
+
+                <div class="product_cart_button">
+                    <form action="">
+                        {% csrf_token %}
+                    <button type="submit">Удалить</button>
+                    </form>
+                </div>
+
+            <div class="product_cart_price">
+                <p>45.00P</p>
+            </div>
+                </div>
+        </div>
+
+        <div class="product_cart_entry">
+            <div class="product_cart_leftpart">
+            <div class="leftimage">
+                <img src="{% static 'cart/assets/cart_product_img.png' %}" alt="">
+            </div>
+                <h2>Название товара</h2>
+            </div>
+            <div class="product_cart_secondcolumn">
+
+
+                <div class="product_cart_button">
+                    <form action="">
+                        {% csrf_token %}
+                    <button type="submit">Удалить</button>
+                    </form>
+                </div>
+
+            <div class="product_cart_price">
+                <p>45.00P</p>
+            </div>
+                </div>
+        </div>
+
+        <div class="product_cart_entry">
+            <div class="product_cart_leftpart">
+            <div class="leftimage">
+                <img src="{% static 'cart/assets/cart_product_img.png' %}" alt="">
+            </div>
+                <h2>Название товара</h2>
+            </div>
+            <div class="product_cart_secondcolumn">
+
+
+                <div class="product_cart_button">
+                    <form action="">
+                        {% csrf_token %}
+                    <button type="submit">Удалить</button>
+                    </form>
+                </div>
+
+            <div class="product_cart_price">
+                <p>45.00P</p>
+            </div>
+                </div>
+        </div>
+
+        <div class="product_cart_entry">
+            <div class="product_cart_leftpart">
+            <div class="leftimage">
+                <img src="{% static 'cart/assets/cart_product_img.png' %}" alt="">
+            </div>
+                <h2>Название товара</h2>
+            </div>
+            <div class="product_cart_secondcolumn">
+
+
+                <div class="product_cart_button">
+                    <form action="">
+                        {% csrf_token %}
+                    <button type="submit">Удалить</button>
+                    </form>
+                </div>
+
+            <div class="product_cart_price">
+                <p>45.00P</p>
+            </div>
+                </div>
+        </div>
+    </div>
+        <div class="rightfilter">
+            <div class="isbutton">
+                    <label class="switch">
+                      <input type="checkbox" name="in_stock">
+                      <span class="slider"></span>
+                    </label>
+                    <span style="margin-left: 10px; position: relative; top: 5px;">Cписать 200Р</span>
+                    </div>
+        <div class="gray_filter_text">
+            <p>На карте накоплено 200р</p>
+        </div>
+
+        <div class="filter_cart_firstline">
+            <div class="filterf">
+                3 Товара
+            </div>
+            <div class="filters">
+                258.60Р
+            </div>
+        </div>
+        <div class="filter_cart_secondline">
+            <div class="filterFf">
+                Скидка
+            </div>
+            <div class="filterss">
+                8.60Р
+            </div>
+        </div>
+
+            <div class="overall">
+            <div class="filtero">
+                Итог
+            </div>
+            <div class="filteroo">
+                260.60Р
+            </div>
+        </div>
+
+        <div class="filter_greentext">
+            <p>Вы получите 100 бонусов</p>
+        </div>
+
+        <div class="offer_button">
+            <button>Оформить заказ</button>
+        </div>
+    </div>
+    </div>
+{% endblock %}

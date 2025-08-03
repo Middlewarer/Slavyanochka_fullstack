@@ -1,0 +1,159 @@
+.product_cart_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 100px;
+}
+
+.product_cart_entry {
+    background-color: white;
+    width: 776px;
+    height: 72px;
+    display: flex;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.product_cart_secondcolumn {
+    display: flex;
+    gap: 30px;
+}
+
+.product_cart_secondcolumn h2 {
+    border-right: 1px solid black;
+    padding-right: 30px;
+    margin-right: 20px;
+}
+
+.product_cart_button {
+    position: relative;
+    top: 16px;
+}
+
+.product_cart_price {
+    position: relative;
+    top: 26px;
+}
+
+.product_cart_leftpart {
+    display: flex;
+    gap: 15px;
+}
+
+.product_cart_button button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.product_cart_entry {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.init {
+width: 100%;
+height: 100%;
+padding-left: 150px;
+padding-right: 100px;
+background-color: #FBF8EC;
+padding-top: 30px;
+min-height: 500px;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+.rightfilter {
+    width: 272px;
+    height: 470px;
+    border: 1px solid black;
+}
+
+.mainpart {
+    display: flex;
+}
+
+.filter_cart_firstline, .filter_cart_secondline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter_cart_secondline {
+    margin-bottom: 50px;
+}
+
+.rightfilter {
+    display: flex;
+    flex-direction: column;
+}
+
+.overall {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.isbutton {
+    margin-bottom: 30px;
+}
+
+.gray_filter_text {
+    margin-bottom: 50px;
+}
+
+.offer_button button {
+    width: 272px;
+    height: 60px;
+    background-color: #FCD5BA;
+    font-size: 24px;
+    color: #FF6633;
+    border-radius: 8px;
+}
+
+.filter_greentext {
+    text-align: center;
+    margin-bottom: 35px;    
+}

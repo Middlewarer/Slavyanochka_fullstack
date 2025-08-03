@@ -1,0 +1,95 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'cart/order_offer_styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="init">
+  <h2>Доставка</h2>
+
+        <div class="leftpart_offer">
+<h2>Куда?</h2>
+            <div>
+                <form action="" method="post" class="offer_firstline">
+                <div class="punct">
+                <label for="city">Населённый пункт</label>
+            <select id="city" name="city">
+              <option value="ust-izhma">Усть-Ижма</option>
+              <option value="moscow">Москва</option>
+              <option value="spb">Санкт-Петербург</option>
+        </select>
+                    </div>
+                <div class="street">
+                <label for="street">Улица</label>
+            <select required id="street" name="street">
+              <option value="pushkina">Пушкина</option>
+              <option value="kolotushkina">Колотушкина</option>
+              <option value="sorokskaya">Сорокская</option>
+        </select>
+</div>
+                    <div class="home">
+                <label for="home">Дом</label>
+            <select required id="home" name="home">
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+        </select>
+                </div>
+                    </form>
+            </div>
+        </div>
+
+
+
+    <div class="rightfilter">
+            <div class="isbutton">
+                    <label class="switch">
+                      <input type="checkbox" name="in_stock">
+                      <span class="slider"></span>
+                    </label>
+                    <span style="margin-left: 10px; position: relative; top: 5px;">Cписать 200Р</span>
+                    </div>
+        <div class="gray_filter_text">
+            <p>На карте накоплено 200р</p>
+        </div>
+
+        <div class="filter_cart_firstline">
+            <div class="filterf">
+                3 Товара
+            </div>
+            <div class="filters">
+                258.60Р
+            </div>
+        </div>
+        <div class="filter_cart_secondline">
+            <div class="filterFf">
+                Скидка
+            </div>
+            <div class="filterss">
+                8.60Р
+            </div>
+        </div>
+
+            <div class="overall">
+            <div class="filtero">
+                Итог
+            </div>
+            <div class="filteroo">
+                260.60Р
+            </div>
+        </div>
+
+        <div class="filter_greentext">
+            <p>Вы получите 100 бонусов</p>
+        </div>
+
+        <div class="offer_button">
+            <button>Оформить заказ</button>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
